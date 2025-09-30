@@ -1,32 +1,37 @@
 <script lang="ts">
-	import { page } from "$app/state";
+	import { page } from '$app/state';
 
 	let tabs: {
-		name: string,
-		icon: string,
-		path: string
+		name: string;
+		icon: string;
+		path: string;
 	}[] = [
 		{
-			name: "Inventaire",
-			icon: "lighthouse",
-			path: "/inventaire"
+			name: 'Inventaire',
+			icon: 'lighthouse',
+			path: '/inventaire'
 		},
 		{
-			name: "Contrats",
-			icon: "lighthouse",
-			path: "/contrats"
+			name: 'Contrats',
+			icon: 'lighthouse',
+			path: '/contrats'
 		},
 		{
-			name: "Pass Saisonnier",
-			icon: "lighthouse",
-			path: "/pass-saison"
+			name: 'Pass Saisonnier',
+			icon: 'lighthouse',
+			path: '/pass-saison'
 		},
 		{
-			name: "Pass de Carrière",
-			icon: "lighthouse",
-			path: "/pass-carriere"
+			name: 'Pass de Carrière',
+			icon: 'lighthouse',
+			path: '/pass-carriere'
 		},
-	]
+		{
+			name: 'Recettes',
+			icon: 'lighthouse',
+			path: '/recettes'
+		}
+	];
 </script>
 
 <div>

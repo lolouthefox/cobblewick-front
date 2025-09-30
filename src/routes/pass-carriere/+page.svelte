@@ -2,21 +2,17 @@
 	import { seasonalPass } from '$lib';
 	import PassItem from '$lib/comps/PassItem.svelte';
 	import Titles from '$lib/comps/Titles.svelte';
-	let currentPage: number = 0;
-	let currentLevel: number = 4;
+	let currentLevel: number = 14;
 	let currentProgress: number = 2562;
+	let currentPage: number = Math.floor(currentLevel / 8);
 </script>
 
 <div class="pass">
-	<div class="titles">
-		<Titles
-			icon="hand-waving"
-			title="Pass Saisonnier"
-			subtitle="{seasonalPass.name} - {seasonalPass.finishes
-				? Math.ceil((seasonalPass.finishes.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-				: '???'} jours restants"
-		/>
-	</div>
+	<Titles
+		icon="shield-chevron"
+		title="Pass de Carrière"
+		subtitle="Remplissez des contrats pour débloquer de nouveaux items."
+	/>
 	<div class="tiles">
 		{#each seasonalPass.pages as page, i}
 			{#if currentPage == i}
