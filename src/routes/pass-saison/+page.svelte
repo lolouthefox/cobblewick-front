@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { seasonalPass } from '$lib';
+	import { seasonalPass, type Bundle } from '$lib';
+	import Item from '$lib/comps/Item.svelte';
+	import ItemDisplay from '$lib/comps/item/ItemDisplay.svelte';
+	import Pager from '$lib/comps/Pager.svelte';
 	import PassItem from '$lib/comps/PassItem.svelte';
 	import Titles from '$lib/comps/Titles.svelte';
-	let currentPage: number = 0;
+	let currentPage: number = $state(0);
 	let currentLevel: number = 4;
 	let currentProgress: number = 2562;
+
+	let selectedItem: any = $state(seasonalPass.pages[0].items[0]);
 </script>
 
 <div class="pass">
@@ -16,6 +21,13 @@
 				? Math.ceil((seasonalPass.finishes.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
 				: '???'} jours restants"
 		/>
+	</div>
+	<div class="content">
+		<ItemDisplay imageUrl={selectedItem.thumbnail} />
+		<div class="meta">
+			<h2>{selectedItem.name}</h2>
+			<p>{selectedItem.description}</p>
+		</div>
 	</div>
 	<div class="tiles">
 		{#each seasonalPass.pages as page, i}
@@ -29,30 +41,28 @@
 							XPRequired={7000}
 							XPAcquired={currentLevel == level ? currentProgress : 0}
 							finished={currentLevel > level}
+							onclick={() => {
+								selectedItem = item;
+							}}
 						/>
 					{/each}
 				</div>
 			{/if}
 		{/each}
-		<div class="pagination">
-			<button
-				onclick={() => {
-					currentPage -= 1;
-				}}
-				disabled={currentPage <= 0}>Previous page</button
-			>
-			<p>{currentPage + 1}/{seasonalPass.pages.length}</p>
-			<button
-				onclick={() => {
-					currentPage += 1;
-				}}
-				disabled={currentPage >= seasonalPass.pages.length - 1}>Next page</button
-			>
-		</div>
+		<Pager bind:currentPage maxPage={seasonalPass.pages.length} />
 	</div>
 </div>
 
 <style>
+	.meta {
+		width: 300px;
+	}
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 48px;
+	}
 	.pass {
 		padding: 48px;
 		position: relative;
@@ -70,12 +80,6 @@
 		padding: 16px;
 		gap: 16px;
 		gap: 8px;
-	}
-	.pagination {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 24px;
 	}
 	.passPage {
 		display: flex;

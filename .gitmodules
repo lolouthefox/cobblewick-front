@@ -1,0 +1,3 @@
+[submodule "static/mc-icons"]
+	path = static/mc-icons
+	url = https://github.com/undrfined/mc-icons.git

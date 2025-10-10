@@ -51,13 +51,13 @@
 	}
 	a {
 		text-decoration: none;
-		color: black;
+		color: var(--rich-black);
 		border-radius: 8px;
 		padding: 8px;
 		font-weight: bold;
 	}
 	a.active {
-		background-color: black;
-		color: white;
+		background-color: var(--rich-black);
+		color: var(--background);
 	}
 </style>

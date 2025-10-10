@@ -11,7 +11,7 @@
 
 <style>
 	.card {
-		background-color: rgb(255, 226, 148);
+		background-color: var(--on-background);
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
@@ -23,6 +23,8 @@
 		width: 128px;
 		height: 128px;
 		border-radius: 4px;
+		object-fit: contain;
+		image-rendering: pixelated;
 	}
 	.rarity-bar {
 		height: 4px;

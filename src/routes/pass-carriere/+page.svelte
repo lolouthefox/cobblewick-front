@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { seasonalPass } from '$lib';
+	import Pager from '$lib/comps/Pager.svelte';
 	import PassItem from '$lib/comps/PassItem.svelte';
 	import Titles from '$lib/comps/Titles.svelte';
 	let currentLevel: number = 14;
@@ -30,21 +31,7 @@
 				</div>
 			{/if}
 		{/each}
-		<div class="pagination">
-			<button
-				onclick={() => {
-					currentPage -= 1;
-				}}
-				disabled={currentPage <= 0}>Previous page</button
-			>
-			<p>{currentPage + 1}/{seasonalPass.pages.length}</p>
-			<button
-				onclick={() => {
-					currentPage += 1;
-				}}
-				disabled={currentPage >= seasonalPass.pages.length - 1}>Next page</button
-			>
-		</div>
+		<Pager bind:currentPage maxPage={seasonalPass.pages.length} />
 	</div>
 </div>
 
@@ -66,12 +53,6 @@
 		padding: 16px;
 		gap: 16px;
 		gap: 8px;
-	}
-	.pagination {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 24px;
 	}
 	.passPage {
 		display: flex;

@@ -90,75 +90,75 @@ export let seasonalPass: ContentPass = {
 			name: 'Home Sweet Home',
 			items: [
 				{
-					name: 'Cozy Slippers',
-					description: 'Keep your feet warm with these soft slippers.',
+					name: 'Sunflower',
+					description: 'A token of our appreciation.',
 					rarity: Rarity.COMMON,
 					category: ItemCategory.COSMETIC_BOOTS,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/175_Sunflower.png'
 				},
 				{
-					name: 'Hot Cocoa Mug',
-					description: 'A mug of hot cocoa to warm your hands.',
+					name: 'Nick Wilde Poster',
+					description: 'Yes, there\'s a second movie :D',
 					rarity: Rarity.UNCOMMON,
 					category: ItemCategory.ITEMS,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/nick.jpg'
 				},
 				{
-					name: 'Knitted Scarf',
-					description: 'A handmade scarf to keep you cozy.',
+					name: 'Note Block',
+					description: 'Plays a sound when hit or powered through redstone. You can also modify which sound it plays by putting different materials under it.',
 					rarity: Rarity.UNCOMMON,
 					category: ItemCategory.COSMETIC_CHESTPLATE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/25_Note Block.png'
 				},
 				{
-					name: 'Wooden Rocking Chair',
-					description: 'A classic rocking chair for relaxation.',
+					name: 'Piston',
+					description: 'Pushes blocks when powered.',
 					rarity: Rarity.RARE,
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/33_Piston.png'
 				},
 				{
-					name: 'Candle Set',
-					description: 'A set of scented candles for a warm ambiance.',
+					name: 'Glass Pane',
+					description: 'You can see through it.',
 					rarity: Rarity.COMMON,
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/102_Glass Pane.png'
 				},
 				{
-					name: 'Woolen Mittens',
-					description: 'Soft mittens to keep your hands warm.',
+					name: 'Enchantment Table',
+					description: 'You can do magic things to unlock incredible power.',
 					rarity: Rarity.COMMON,
 					category: ItemCategory.COSMETIC_CHESTPLATE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/116_Enchantment Table.png'
 				},
 				{
-					name: 'Cozy Fireplace',
-					description: 'A fireplace to bring warmth to your home.',
+					name: 'Orange Stained Glass Pane',
+					description: 'It\'s a glass pane, but colored.',
 					rarity: Rarity.RARE,
 					category: ItemCategory.BLOCK_RECIPE,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: '/mc-icons/pics/160_1_Orange Stained Glass Pane.png'
 				},
 				{
-					name: 'Home Comforts Bundle',
-					description: 'A bundle of items to make your home extra cozy.',
+					name: 'Iron Tools',
+					description: 'For strong people only.',
 					rarity: Rarity.EPIC,
 					category: ItemCategory.ITEM_RECIPE,
 					isPremium: true,
-					thumbnail: '',
+					thumbnail: '/mc-icons/pics/258_Iron Axe.png',
 					items: [
 						{
 							name: 'Cozy Slippers',
@@ -167,7 +167,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.COSMETIC_BOOTS,
 							isPremium: false,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 						},
 						{
 							name: 'Hot Cocoa Mug',
@@ -176,7 +176,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.ITEMS,
 							isPremium: false,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 						}
 					]
 				}
@@ -192,7 +192,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 				},
 				{
 					name: 'Rustic Coffee Table',
@@ -201,7 +201,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.BLOCK_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-sitting-orange-cat-on-white-background-png-image_7094889.png'
 				},
 				{
 					name: 'Vintage Lamp',
@@ -210,7 +210,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://pngimg.com/d/cat_PNG50473.png'
 				},
 				{
 					name: 'Knitted Cushion',
@@ -219,7 +219,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 2,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-sitting-orange-cat-on-white-background-png-image_7094889.png'
 				},
 				{
 					name: 'Fireplace Mantel',
@@ -228,7 +228,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.BLOCK_RECIPE,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 				},
 				{
 					name: 'Wall Art Set',
@@ -237,7 +237,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 				},
 				{
 					name: 'Wool Rug',
@@ -246,7 +246,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-sitting-orange-cat-on-white-background-png-image_7094889.png'
 				},
 				{
 					name: 'Cozy Living Bundle',
@@ -254,7 +254,7 @@ export let seasonalPass: ContentPass = {
 					rarity: Rarity.EPIC,
 					category: ItemCategory.ITEM_RECIPE,
 					isPremium: true,
-					thumbnail: '',
+					thumbnail: 'https://pngimg.com/d/cat_PNG50473.png',
 					items: [
 						{
 							name: 'Plaid Blanket',
@@ -263,7 +263,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.DECORATION_RECIPE,
 							isPremium: false,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 						},
 						{
 							name: 'Rustic Coffee Table',
@@ -272,7 +272,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.BLOCK_RECIPE,
 							isPremium: false,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 						}
 					]
 				}
@@ -288,7 +288,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-sitting-orange-cat-on-white-background-png-image_7094889.png'
 				},
 				{
 					name: 'Icicle Lights',
@@ -297,7 +297,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 				},
 				{
 					name: 'Snowman Decoration',
@@ -306,7 +306,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 				},
 				{
 					name: 'Frosted Windowpanes',
@@ -315,7 +315,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.BLOCK_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://pngimg.com/d/cat_PNG50473.png'
 				},
 				{
 					name: 'Winter Wreath',
@@ -324,7 +324,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.DECORATION_RECIPE,
 					isPremium: false,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 				},
 				{
 					name: 'Frozen Fountain',
@@ -333,7 +333,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.BLOCK_RECIPE,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-sitting-orange-cat-on-white-background-png-image_7094889.png'
 				},
 				{
 					name: 'Snowflake Trail',
@@ -342,7 +342,7 @@ export let seasonalPass: ContentPass = {
 					category: ItemCategory.COSMETIC_TRAIL,
 					isPremium: true,
 					quantity: 1,
-					thumbnail: ''
+					thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 				},
 				{
 					name: 'Winter Wonderland Bundle',
@@ -350,7 +350,7 @@ export let seasonalPass: ContentPass = {
 					rarity: Rarity.EPIC,
 					category: ItemCategory.ITEM_RECIPE,
 					isPremium: true,
-					thumbnail: '',
+					thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png',
 					items: [
 						{
 							name: 'Snowy Pine Tree',
@@ -359,7 +359,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.DECORATION_RECIPE,
 							isPremium: false,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://png.pngtree.com/png-clipart/20230512/original/pngtree-isolated-cat-on-white-background-png-image_9158356.png'
 						},
 						{
 							name: 'Icicle Lights',
@@ -368,7 +368,7 @@ export let seasonalPass: ContentPass = {
 							category: ItemCategory.DECORATION_RECIPE,
 							isPremium: true,
 							quantity: 1,
-							thumbnail: ''
+							thumbnail: 'https://static.vecteezy.com/system/resources/thumbnails/047/493/988/small_2x/hairy-fluffy-cat-playing-png.png'
 						}
 					]
 				}

@@ -9,21 +9,23 @@
 		level,
 		XPRequired,
 		XPAcquired,
-		finished
+		finished,
+		onclick
 	}: {
 		item: Item | Bundle;
 		level: number;
 		XPRequired: number;
 		XPAcquired: number;
 		finished: boolean;
+		onclick?: any;
 	} = $props();
 
 	let actualAcquiredXP = $derived(finished ? XPRequired : XPAcquired);
 </script>
 
-<div class="pass-item">
+<button class="pass-item" {onclick}>
 	{#if item.isPremium}
-		<h3><Icon icon="star-four" size="16px" /> Premium</h3>
+		<h3 class="premium"><Icon icon="star-four" size="16px" /> Premium</h3>
 	{:else}
 		<h3>Gratuit</h3>
 	{/if}
@@ -40,9 +42,20 @@
 		{/if}
 		<div class="progress" style="width: {(actualAcquiredXP / XPRequired) * 100}%;"></div>
 	</div>
-</div>
+</button>
 
 <style>
+	.premium {
+		background: #552a9b;
+		background: linear-gradient(
+			132deg,
+			rgba(85, 42, 155, 1) 0%,
+			rgba(206, 181, 245, 1) 27%,
+			rgba(85, 42, 155, 1) 100%
+		);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 	h3 {
 		display: flex;
 		align-items: center;
@@ -52,18 +65,22 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
+
+		background-color: transparent;
+		border: none;
 	}
 	.level {
 		display: flex;
 		position: relative;
 		height: 24px;
-		background-color: white;
+		background-color: var(--on-background);
+		color: var(--on-secondary);
 		border-radius: 8px;
 		overflow: hidden;
 	}
 	.progress {
 		height: 100%;
-		background-color: yellow;
+		background-color: var(--secondary);
 	}
 	.level p {
 		position: absolute;

@@ -1,4 +1,20 @@
 :root {
+	/* Colors */
+	--almond: #E0D0C1;
+	--beaver: #b49082ff;
+	--chestnut: #98473eff;
+	--copper: #a37c40ff;
+	--rich-black: #07090fff;
+
+	/* Color palette */
+	--text: var(--rich-black);
+	--background: var(--almond);
+	--on-background: var(--beaver);
+	--secondary: var(--chestnut);
+	--on-secondary: var(--almond);
+	--accent: var(--copper);
+	--on-accent: var(--almond);
+
 	--heading-font: 'Melodrama', serif;
 	--body-font: 'Gambetta', serif;
 }
@@ -10,7 +26,8 @@
 }
 
 body {
-	background-color: oklch(97.629% 0.01334 53.069);
+	background-color: var(--background);
+	color: var(--rich-black);
 	font-family: var(--body-font);
 	position: fixed;
 	inset: 0;
