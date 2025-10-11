@@ -62,20 +62,17 @@ export interface ContentPass {
 
 export function getRarityColor(rarity: Rarity) {
 	switch (rarity) {
-		case Rarity.COMMON:
-			return '255, 255, 255';
-
 		case Rarity.UNCOMMON:
-			return '255, 255, 0';
+			return '#a87900';
 
 		case Rarity.RARE:
-			return '0, 255, 255';
+			return '#0098d9';
 
 		case Rarity.EPIC:
-			return '255, 255, 0';
+			return '#b300ff';
 
 		default:
-			return '255, 255, 255';
+			return 'var(--text)';
 	}
 }
 

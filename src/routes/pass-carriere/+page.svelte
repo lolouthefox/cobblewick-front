@@ -39,10 +39,11 @@
 	.pass {
 		padding: 48px;
 		position: relative;
-		height: 100%;
+		flex: 1 0 0;
 
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		justify-content: space-between;
 	}
 	.tiles {

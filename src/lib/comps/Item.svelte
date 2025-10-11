@@ -20,8 +20,8 @@
 		width: min-content;
 	}
 	img {
-		width: 128px;
-		height: 128px;
+		width: 80px;
+		height: 80px;
 		border-radius: 4px;
 		object-fit: contain;
 		image-rendering: pixelated;

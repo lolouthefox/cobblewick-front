@@ -10,7 +10,8 @@
 		XPRequired,
 		XPAcquired,
 		finished,
-		onclick
+		onclick,
+		selected = false
 	}: {
 		item: Item | Bundle;
 		level: number;
@@ -18,14 +19,15 @@
 		XPAcquired: number;
 		finished: boolean;
 		onclick?: any;
+		selected?: boolean;
 	} = $props();
 
 	let actualAcquiredXP = $derived(finished ? XPRequired : XPAcquired);
 </script>
 
-<button class="pass-item" {onclick}>
+<button class="pass-item" {onclick} class:selected class:premium={item.isPremium}>
 	{#if item.isPremium}
-		<h3 class="premium"><Icon icon="star-four" size="16px" /> Premium</h3>
+		<h3><Icon icon="star-four" size="16px" /> Premium</h3>
 	{:else}
 		<h3>Gratuit</h3>
 	{/if}
@@ -38,7 +40,7 @@
 		{#if actualAcquiredXP > 0 && !finished}
 			<p>{actualAcquiredXP}/{XPRequired}</p>
 		{:else}
-			<p>Level {level}</p>
+			<p>LVL {level}</p>
 		{/if}
 		<div class="progress" style="width: {(actualAcquiredXP / XPRequired) * 100}%;"></div>
 	</div>
@@ -46,15 +48,23 @@
 
 <style>
 	.premium {
-		background: #552a9b;
-		background: linear-gradient(
-			132deg,
-			rgba(85, 42, 155, 1) 0%,
-			rgba(206, 181, 245, 1) 27%,
-			rgba(85, 42, 155, 1) 100%
+		background: repeating-linear-gradient(
+			to bottom right,
+			#a2682a 0%,
+			#be8c3c 8%,
+			#be8c3c 18%,
+			#d3b15f 27%,
+			#faf0a0 35%,
+			#ffffc2 40%,
+			#faf0a0 50%,
+			#d3b15f 58%,
+			#be8c3c 67%,
+			#b17b32 77%,
+			#bb8332 83%,
+			#d4a245 88%,
+			#e1b453 93%,
+			#a4692a 100%
 		);
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 	h3 {
 		display: flex;
@@ -67,20 +77,34 @@
 		gap: 4px;
 
 		background-color: transparent;
+		box-shadow: inset 0 0 0 2px var(--text);
 		border: none;
+		padding: 12px;
+
+		--text-color: var(--text);
+		--container-color: var(--background);
+		color: var(--text-color);
 	}
+	.pass-item.selected {
+		background: var(--accent);
+		box-shadow: none;
+		--text-color: var(--background);
+		--container-color: var(--text);
+	}
+
 	.level {
 		display: flex;
 		position: relative;
-		height: 24px;
-		background-color: var(--on-background);
-		color: var(--on-secondary);
-		border-radius: 8px;
+		height: 28px;
+		color: var(--container-color);
+		box-shadow: inset 0 0 0 2px var(--text-color);
 		overflow: hidden;
+		padding: 4px;
+		font-weight: bolder;
 	}
 	.progress {
 		height: 100%;
-		background-color: var(--secondary);
+		background-color: var(--text-color);
 	}
 	.level p {
 		position: absolute;

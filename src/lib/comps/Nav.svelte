@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import NoiseEffect from './NoiseEffect.svelte';
 
 	let tabs: {
 		name: string;
@@ -35,8 +36,13 @@
 </script>
 
 <div>
+	<NoiseEffect />
 	{#each tabs as tab}
-		<a class:active={page.url.pathname == tab.path} href={tab.path}>{tab.name}</a>
+		{#if page.url.pathname == tab.path}
+			<a class="active" href={tab.path}>• {tab.name} •</a>
+		{:else}
+			<a href={tab.path}>{tab.name}</a>
+		{/if}
 	{/each}
 </div>
 
@@ -48,16 +54,21 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
+
+		position: relative;
+		background: var(--background-gr);
+		overflow: hidden;
 	}
 	a {
 		text-decoration: none;
-		color: var(--rich-black);
+		color: var(--text);
 		border-radius: 8px;
 		padding: 8px;
 		font-weight: bold;
+		corner-shape: scoop;
 	}
 	a.active {
-		background-color: var(--rich-black);
+		background-color: var(--text);
 		color: var(--background);
 	}
 </style>

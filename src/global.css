@@ -1,19 +1,11 @@
 :root {
-	/* Colors */
-	--almond: #E0D0C1;
-	--beaver: #b49082ff;
-	--chestnut: #98473eff;
-	--copper: #a37c40ff;
-	--rich-black: #07090fff;
-
 	/* Color palette */
-	--text: var(--rich-black);
-	--background: var(--almond);
-	--on-background: var(--beaver);
-	--secondary: var(--chestnut);
-	--on-secondary: var(--almond);
-	--accent: var(--copper);
-	--on-accent: var(--almond);
+	--text: #322F4A;
+	--background: #D2C1B1;
+	--accent: #e6551c;
+	--on-accent: #FFF;
+
+	--background-gr: radial-gradient(circle, rgba(211, 198, 181, 1) 0%, rgba(185, 165, 140, 1) 100%);
 
 	--heading-font: 'Melodrama', serif;
 	--body-font: 'Gambetta', serif;
@@ -26,8 +18,13 @@
 }
 
 body {
-	background-color: var(--background);
-	color: var(--rich-black);
+	background-image: url("/table.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	background-attachment: fixed;
+
+	color: var(--text);
 	font-family: var(--body-font);
 	position: fixed;
 	inset: 0;

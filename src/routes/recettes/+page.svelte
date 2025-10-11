@@ -2,7 +2,7 @@
 	import Titles from '$lib/comps/Titles.svelte';
 </script>
 
-<div class="contracts">
+<div class="recipes">
 	<Titles
 		icon="book-bookmark"
 		title="Livre à Recettes"
@@ -11,12 +11,14 @@
 </div>
 
 <style>
-	.contracts {
+	.recipes {
 		padding: 48px;
 		position: relative;
-		height: 100%;
+		flex: 1 0 0;
 
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 	}
 </style>
